@@ -126,6 +126,8 @@ class BuildJar : JdkTask
     // jar up temp directory
     log.info("Jar [${destFile.osPath}]")
     Exec(script, [jarExe, "cfm", destFile.osPath, manifest.osPath, "-C", temp.osPath, "."], temp).run
+
+    temp.delete
   }
 
   ** Build the list of pods required for this jar
