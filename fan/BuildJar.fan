@@ -57,6 +57,7 @@ class BuildJar : JdkTask
     // make temp dirs
     temp.delete
     temp.create
+    temp.deleteOnExit
     tempLib.create
     tempFan.create
     tempExt.create

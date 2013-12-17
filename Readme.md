@@ -20,7 +20,7 @@ Example:
     }
 
     @Target { help = "Build single jar" }
-    Void jars()
+    Void jar()
     {
       BuildJar(this){
         destFile = `./mycoolapp.jar`
@@ -30,6 +30,10 @@ Example:
       }.run
     }
   }
+
+Build the jar:
+
+    fan build.fan jar
 
 Once done the app can be run simply using JNLP or manually:
 
