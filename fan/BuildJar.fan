@@ -176,7 +176,7 @@ class BuildJar : JdkTask
         {
         // No duplicates
         if( ! results.contains(dep.name))
-          {
+        {
           results.add(dep.name)
           // recurse into pod dependencies
           resolveDeps(results, depPod)
@@ -184,6 +184,12 @@ class BuildJar : JdkTask
       }
     }
   }
+
+  static const Str[] STANDARD_PODS := ["build", "compiler", "compilerDoc", "compilerJava", "compilerJs", "concurrent",
+              "dom", "email", "fandoc", "fanr", "fansh", "flux", "fluxText", "fwt", "gfx", "icons", "inet",
+              "obix", "sql", "syntax", "sys", "util", "web", "webfwt", "webmod", "wisp", "xml",
+              "docFanr", "docIntro", "docLang", "docTools"]
+
 }
 
 
